@@ -46,3 +46,7 @@ There can't be any bugs.
 You must have used it the wrong way.
 
 [ruby]: http://ruby-lang.org/
+
+## LICENSE
+
+[WTFPL](http://sam.zoy.org/wtfpl/)
