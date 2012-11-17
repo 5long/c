@@ -17,8 +17,6 @@ def record(cmd, *args)
   args.unshift cmd
   args.unshift 'exec'
 
-  home = ENV['HOME']
-  rcfile = "#{home}/.continuerc"
   File.open rcfile, 'w' do |f|
     f.puts '#!/bin/sh'
     f.puts args.shelljoin
