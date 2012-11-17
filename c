@@ -1,8 +1,12 @@
 #!/usr/bin/env ruby
 
-def replay()
+def rcfile
   home = ENV['HOME']
-  exec "#{home}/.continuerc"
+  "#{home}/.continuerc"
+end
+
+def replay()
+  exec rcfile
 end
 
 def record(cmd, *args)
