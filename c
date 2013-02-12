@@ -6,7 +6,12 @@ def rcfile
 end
 
 def replay()
-  exec rcfile
+  if File.exist?(rcfile)
+    exec rcfile
+  else
+    STDERR.puts "No command recorded."
+    exit 1
+  end
 end
 
 def record(cmd, *args)
