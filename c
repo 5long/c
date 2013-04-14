@@ -23,7 +23,7 @@ def record(cmd, *args)
   args.unshift 'exec'
 
   File.open rcfile, 'w' do |f|
-    f.puts '#!/bin/sh'
+    f.puts '#!/bin/sh -e'
     f.puts args.shelljoin
   end
   FileUtils.chmod 'a+x', rcfile
